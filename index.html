@@ -11,7 +11,6 @@
     <body>
         <script src="" async defer></script>
         <h1>Git Curso Elemental de Git, Hecho Publico Por Pildorasinformaticas Web</h1>
-        <body>
             <h2>Git - Conceptos Basicos</h2>
             <p>
                 Git se subdivide en tres areas basicas:
@@ -35,7 +34,7 @@
                 para trabajos posteriores</p>
             </ul>
             <h2>Creando un Repositorio</h2>
-            <P>
+            <ul>
                 <li>Git Init</li>
                 <p>Este, como ya mencionamos anteriormente, es el primer paso. Pero para esto, te vas hacia el directorio en tu PC o servidor donde tienes guardadp el archivo HTML y con click
                     derecho, seleccionas la opcion "Bash Here". Esta opcion activa automaticamente el Git Bash dentro del directorio seleccionado.
@@ -43,8 +42,40 @@
                     directorio.
                     Una vez alli, tipeas "Git Init", para iniciar el proceso de Git
                 </p>
-                
-            </P>
-        </body>
+                <li>Staging Area</li>
+                <p>
+                    Al comenzar a trabajar en un documento dentro del directorio que esta siendo respaldado, y cuando se quiera 'crear un checkpoint de los cambios', asi como para que Git sepa
+                    que el archivo tiene que ser monitoreado para registrar los cambios, se debe enviar al area de Stage.
+                    Para esto, utilizamos el comando git add 'nombre del archivo'.
+                </p>
+                <li>Git Status</li>
+                <p>
+                    Permite ver el estado de los archivos con los que estamos trabajando en el directorio que esta siendo guardado en Git.
+                    A - Significa que el archivo se encuentra en la staging area.
+                    Para dar inicio al git status, el comando es "git status -s".
+                </p>
+                <li>Git Commit</li>
+                <p>
+                    Es el paso final en el repositorio Git, este comando envia el archivo desde la Staging Area al Repositorio Local.
+                    El comando de activacion es "git commit -m". Se acompa;a con un nombre para el Commit o para el respaldo, colocado entre comillas despues de la 'M'.
+                    Antes de hacer el commit, se debe configurar un correo y un nombre dentro de Git Hub. Para esto se utilizan los siguientes comandos:
+                    - git config --global user.name "tu nombre de usuario" (para registrar el nombre de usuario).
+                    - git config --global user.email "tu direccion de correo electronico" (para registrar el correo electronico).
+                </p>
+                </ul>
+        <h2>Como se Que Mi Archivo Esta Sincronizado con el Repositorio?</h2>
+        <p>
+            Utilizamos el comando 'git status -s'. Una vez que el archivo se encuentra incluido en el respositorio, desaparecera de la lista en el Git Bash.
+        </p>
+        <h2>Que Pasa si Hago un Cambio Despues de Enviar un Commit a un Repositorio?</h2>
+        <p>Inmediatamente despues de hacer cualquier cambio en un archivo, debemos enviar los archivos al area de Stage (git add 'nombre del archivo')
+            Si nos saltamos este paso, Git no sera capaz de reconocer que el archivo esta siendo editado, y cuando se quiera hacer un 'commit', arrojara el error de 'Changes not staged for commit'.
+        </p>
+        <h2>Como Saber Cuantas 'copias' y/o 'commit' se han hecho en el Repositorio Local?</h2>
+        <p>
+            git log --oneline
+            Este comando nos sirve para obtener un listado de todos los cambios que se han registrado en el repositorio local.
+        </p>
+        <a href= "cargando-los-archivos-a-github.html">'Cargando Los Archivos del Repositorio Local a Github'</a>
     </body>
 </html>
