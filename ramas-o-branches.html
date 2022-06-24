@@ -1,0 +1,54 @@
+<!DOCTYPE html > <html>
+    <head>
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>Ramas o Branches de Git</title>
+                <meta name="description" content="">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <link rel="stylesheet" href=""></head>
+                        <body>
+                            <h1>Ramas o Branches de Git</h1>
+                            <p>
+                                Las ramas o branches son lineas de tiempo dentro del log de Git. En esta linea
+                                de tiempo se organizan las instantaneas que Git toma cada vez Que cargamos un
+                                'commit'.<br>
+                                    La rama principal en Git, actualmente en junio de 2022, cuando escribo este
+                                    documento, se llama 'Main'. Lo especifico, porque anteriormente, se le conocia
+                                    como 'master'.<br>
+                                        De la rama 'main' se subdividen otras ramas, que debe ir creando cada miembro
+                                        del equipo de desarrollo a medida que realiza un cambio en el proyecto. Cada
+                                        commit realizado en cualquiera de las ramas de Git, nos ayuda a volver atras en
+                                        el tiempo, en casao de que algun cambio hecho recientemente sea insatisfactorio.<br>
+                                            Crear otra rama en 'main', equivale a crear una copia del proyecto, sobre esta
+                                            copia se van a trabajar cambios y se haran pruebas. Esto nos ayuda a Que el
+                                            codigo inicial no sea modificado por aquellos cambios que aun no hayan sido
+                                            aprobados.<br>
+                                                Una practica 'ideal', mas no obligatoria. Es que cada archivo sea modificado en
+                                                una rama adicional. Por ejemplo, en desarrollo web, es recomendable editar el
+                                                index en la rama 'main', mientras que los archivos CSS y JS, sean modificados en
+                                                ramas adicionales.<br>
+                                                    Las cosas se complican cuando toca hacer un merge entre las ramas, que es la
+                                                    unificacion de los cambios en la rama main.
+                                                </p>
+                                                <h2>Ejemplo de Creacion de Ramas</h2>
+                                                <ul>
+                                                    <li>una buena practica es comenzar ejecutando un git log --oneline para estar
+                                                        seguro de los commit realizados en Git.</li>
+                                                    <li>Para crear una rama en el bash de Git, se coloca el comando -git branch
+                                                        'nombre de la rama', y enter.</li>
+                                                    <li>Una vez ejecutado este comando, ya habremos creado la rama. Con el comando
+                                                        -git branch- podremos visualizar las ramas creadas, si hacemos nuevamente un
+                                                        --oneline, podremos ver que efectivamente ha sido agregada una rama nueva.
+                                                    </li>
+                                                    <li>El comando git branch, mostarara la rama activa colocandola en verde y
+                                                        se;alandola con un asterisco</li>
+                                                    <li>Para movernos a otra rama, utilizamos el comando -git checkout 'nombre de la
+                                                        rama a donde queremos pasar'</li>
+                                                    <li>Una vez revisados los cambios, para hacer un merge, debemos ubicarnos siempre en la rama 'main'. Una vez aca,
+                                                        colocamos el comando -git merge 'nombre de la rama'. Con este comando, todos los cambios de la rama que Esta
+                                                        siendo editada, pasan a ser parte de la rama main.
+                                                    </li>
+                                                </ul>
+                                                <script src="" async="async" defer="defer"></script>
+                                            </body>
+                                        </html>
